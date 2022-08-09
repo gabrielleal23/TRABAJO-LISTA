@@ -1,0 +1,28 @@
+package Lista;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+
+/**
+ *
+ * @author gabriel
+ */
+public class Lista {
+
+    public static void main(String[] args) {
+        Scanner vl = new Scanner (System.in);    
+    List <Integer> arreglos = new ArrayList<>();
+    System.out.println("Cuantos datos quiere ingresar a la lista:");
+    int a = vl.nextInt();
+    for ( int i = 0 ;i<a ; i++ ){
+       System.out.println("Ingrese valores que quiere almacenar en la lista:");
+       int datos= vl.nextInt(); 
+       arreglos.add(datos);
+        } 
+    for (int elemento:arreglos){
+             System.out.println("Los datos de la lista son "+arreglos);
+        }
+    }
+}
