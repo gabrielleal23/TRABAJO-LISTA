@@ -1,0 +1,61 @@
+import java.util.*;
+/**
+ *
+ * @author SALA
+ */
+public class TALLER_GABRIEL {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+   
+      /**
+        //Preguntar al usuaria desde teclado 
+        //1.Crear un objrto 
+        Scanner objeto = new Scanner (System.in);
+        System.out.println("Digite el primer valor ");
+        int a=objeto.nextInt();
+        System.out.println("Digite el segundo valor");
+        int b=objeto.nextInt();
+                
+     
+        if (a>b){      
+            System.out.println("la variavle a es mayor");
+        }else if (b<a){
+            System.out.println("La variable b es mayor");  
+        }else if (a==3){
+             System.out.println("La variable a es 3");
+        }else{
+              System.out.println("el numero es menos");
+        
+            }
+      
+
+ 
+       Scanner x = new Scanner (System.in);
+       System.out.println("Digite el primer valor ");
+       int c=x.nextInt();
+       int control=0;
+       while (control<c){
+           System.out.println("Dentro del while");
+           control=control+1; 
+       }
+       
+       for (int i=0;i<10;i+=2){
+           System.out.println("Dentro del for ...");
+       }
+       
+   
+       int mult=5;
+       int controls=11;
+       int result=0;
+       do{
+           result=mult*controls;
+           System.out.println("El resultado es " + result);
+           controls++;
+          
+       }while(controls<10);
+       
+    }
