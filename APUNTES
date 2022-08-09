@@ -58,4 +58,46 @@ public class TALLER_GABRIEL {
           
        }while(controls<10);
        
+        // TODO code application logic here
+        System.out.println("HOLA CV");
+        int mivariable = 1;
+        System.out.println("hola todos "+mivariable);
+        //print ("Hola a todos",mivariable)
+        /*
+        byte x=1;
+        int y=15000;
+        float c= 34;
+        double d=10.234;
+        boolean valor=false;
+        char a ='z';
+        String fe="hola";
+        System.out.println("hola todos"+fe+c+x+y);
+       
+        */
+        int a ; 
+        int b ;
+        int total;
+        a=3;
+        b=2;
+        total=a+b;
+        System.out.println("El resultado de la suma es "+total);
+        /*
+         */      
+        a=3;
+        b=2;
+        boolean r;
+        r=(a==b);
+        System.out.println("hola "+r);
+        /*
+        
+        */
+        int m=3;
+        int c=50;
+        int x=60;
+        boolean r;
+        r=(c<m) || (x>c);
+        System.out.println("hola a todos",r);
+      
+        
+       
     }
