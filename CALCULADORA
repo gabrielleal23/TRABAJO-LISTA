@@ -1,0 +1,41 @@
+        import java.util.*;
+        
+        
+         * @author SALA
+ */
+public class ACTIVIDAD {
+
+    /**
+     * @param args the command line arguments
+     */
+        
+        // TODO code application logic here
+        int suma=0;
+        int resta=0;
+        int multiplicacion=0;
+        float division=0f;
+     Scanner objeto = new Scanner (System.in);
+        System.out.println("Digite el primer valor ");
+        int a=objeto.nextInt();
+        System.out.println("Digite el segundo valor");
+        int b=objeto.nextInt();
+        System.out.println("Suma 1 , Resta 2 , Multiplicacion 3, Division 4");
+        int seleccione=objeto.nextInt();
+        
+       
+         if (seleccione==1){
+             suma=a+b;
+                     System.out.println("la suma es "+suma);
+         }else if (seleccione==2){
+             resta=a-b;
+                     System.out.println("la resta es "+resta);
+         }else if (seleccione==3){   
+             multiplicacion=a*b;   
+                System.out.println("la multiplicacion es "+multiplicacion);
+         }else if (seleccione==4){
+             division=a/b;  
+                System.out.println("la division es "+division);
+         }
+               
+       }
+}
