@@ -1,0 +1,60 @@
+import java.util.*;
+import javax.swing.*;
+
+/**
+ *
+ * @author SALA
+ */
+public class CLASE0407 {
+
+    /**
+     * @param args the command line arguments
+     */
+     //DECLARAMOS UNA FUNCION 
+        static int sumar(int a, int b){
+            int resultado=0;
+            resultado=a+b;
+            return resultado;
+        }
+        
+        static boolean bisiesto (int year){
+            int p,q,r;
+            p = year%4;
+            q = year%100;
+            r = year%400;
+            
+            if (p==0 && (q!=0 || r==0)){
+                return true;
+        }else {
+            return false;
+                    }
+}
+    
+    public static void main(String[] args) {
+        // TODO code application logic here
+       /**
+        //FUNCIONES
+            int salida=sumar(3,5);
+            System.out.println("El resultado de la suma es: " + salida);
+           
+            salida=sumar(10,40);
+            System.out.println("El resultado de la suma es " + salida);
+    }     
+    */
+   
+    {   
+        char continues = 's';
+        do{
+            String entrada=JOptionPane.showInputDialog(null, "Porfavor ingrese el año");
+            //Pasar dato de string a int 
+            int year = Integer.parseInt(entrada);
+            if (bisiesto (year)==true){
+            JOptionPane.showMessageDialog(null, " THE " + year + " YEAR IS BISIEST "); 
+            }else{
+            JOptionPane.showMessageDialog(null, " THE " + year + " YEAR IS NOT BISIEST "); 
+            }
+            continues=JOptionPane.showInputDialog(null," Desae Continuar s/n ").charAt(0);
+        }while (continues == 's');
+      }
+    }  
+}
