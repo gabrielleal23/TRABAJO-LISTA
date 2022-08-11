@@ -12,6 +12,7 @@ import javax.swing.JOptionPane;
  * @author SALA
  */
 public class NUMEROSPRIMOS {
+    //FUNCION
     static boolean primos (int numeros ){
         int i=2;
         boolean primo=true;
@@ -27,7 +28,9 @@ public class NUMEROSPRIMOS {
           
     
     public static void main(String[] args) {
+        //Char para un caracter de letra
         char continues = 's';
+        //While es para que cuando se agregue el caracter realice el loop
         while (continues == 's'){
         String enter=JOptionPane.showInputDialog(null, "INGRESE UN NUMEROS");
         int numeros = Integer.parseInt(enter);
