@@ -1,0 +1,21 @@
+public class NumerosPrimos {
+        static boolean primos (int numeros ){
+            int p,a;
+            p = (numeros/1) ;
+            a = (numeros/numeros);
+            if (p==numeros && (a==numeros)){
+                return true ;
+            }else{
+                    return false;
+                    }
+        }
+    public static void main(String[] args) {
+        String enter=JOptionPane.showInputDialog(null, "INGRESE UN NUMEROS");
+        int numeros = Integer.parseInt(enter);
+            if (primos (numeros)==true){
+            JOptionPane.showMessageDialog(null, " THE " + numeros + " NUMBER IS PRIME "); 
+            }else{
+            JOptionPane.showMessageDialog(null, " THE " + numeros + " NUMBER IS NOT PRIME "); 
+            }
+    }
+}
