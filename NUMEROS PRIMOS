@@ -1,21 +1,43 @@
-public class NumerosPrimos {
-        static boolean primos (int numeros ){
-            int p,a;
-            p = (numeros/1) ;
-            a = (numeros/numeros);
-            if (p==numeros && (a==numeros)){
-                return true ;
-            }else{
-                    return false;
-                    }
-        }
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
+ */
+
+package com.mycompany.numerosprimos;
+
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author SALA
+ */
+public class NUMEROSPRIMOS {
+    static boolean primos (int numeros ){
+        int i=2;
+        boolean primo=true;
+        while ((primo)&& (i!=numeros)){  
+        if(numeros%i==0)
+            primo=false;
+            i++;
+    }
+     return primo ;
+    }
+    
+                   
+          
+    
     public static void main(String[] args) {
+        char continues = 's';
+        while (continues == 's'){
         String enter=JOptionPane.showInputDialog(null, "INGRESE UN NUMEROS");
         int numeros = Integer.parseInt(enter);
             if (primos (numeros)==true){
             JOptionPane.showMessageDialog(null, " THE " + numeros + " NUMBER IS PRIME "); 
             }else{
-            JOptionPane.showMessageDialog(null, " THE " + numeros + " NUMBER IS NOT PRIME "); 
+                JOptionPane.showMessageDialog(null, " THE " + numeros + " NUMBER IS NOT PRIME "); 
             }
-    }
-}
+              
+               continues=JOptionPane.showInputDialog(null," Desae Continuar s/n ").charAt(0);
+        }        
+   }   
+}    
