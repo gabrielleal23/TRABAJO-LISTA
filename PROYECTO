@@ -1,1 +1,45 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
+ */
+
+package COMPRAVENTADECARROS;
+
+import javax.swing.JOptionPane;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+
+/**
+ *
+ * @author ketty
+ */
+public class COMPRAVENTA {
+
+    public static void main(String[] args) {
+    Scanner select = new Scanner (System.in);
+    List <Integer> inventary = new ArrayList<>();
+    String enter=JOptionPane.showInputDialog(null, " 1.ADD VEHICULE - 2.INVETARY ");
+    int option=select.nextInt();
+        if (option == 1){
+           String c=JOptionPane.showInputDialog(null, " COLOR VEHICULE - 1.AZUL - 2.ROJO - 3.BLANCO - 4.NEGRO ");
+           int color=select.nextInt(); 
+           inventary.add(color);
+           String a=JOptionPane.showInputDialog(null, " MODEL - 1.TOYOTA - 2.RENAULT - 3.CHEVROLET - 4.WW - 5.MERCEDEZ BENZ - 6.BMW - 7.MUSTANG ");
+           int mod=select.nextInt();
+           inventary.add(mod);
+           String y=JOptionPane.showInputDialog(null," YEAR ");
+           int year=select.nextInt();
+           inventary.add(year);
+           String p=JOptionPane.showInputDialog(null," PRICE ");
+           int price=select.nextInt();
+           inventary.add(price);       
+        }else if(option==2){
+            for (int i=0;i<inventary.size();i++){
+            System.out.println(inventary.get(i));
+            }
+        }
+    }
+}
 
