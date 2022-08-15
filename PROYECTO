@@ -23,6 +23,8 @@ public class COMPRAVENTA {
     String enter=JOptionPane.showInputDialog(null, " 1.ADD VEHICULE - 2.INVETARY ");
     int option=select.nextInt();
         if (option == 1){
+           String r=JOptionPane.showInputDialog(null, " REFERENCE ");
+           int ref=select.nextInt(); 
            String c=JOptionPane.showInputDialog(null, " COLOR VEHICULE - 1.AZUL - 2.ROJO - 3.BLANCO - 4.NEGRO ");
            int color=select.nextInt(); 
            inventary.add(color);
