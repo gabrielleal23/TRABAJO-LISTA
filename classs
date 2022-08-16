@@ -1,0 +1,52 @@
+    public static void main (String[] args){
+     auto objetoCarrol=new auto ();
+      
+      objetoCarrol.marca="Chevrolet";
+      objetoCarrol.color="Negro";
+      objetoCarrol.placa="ABC-123";
+      objetoCarrol.modelo=2018;
+      
+        System.out.println("La Marca del carrol es:"+objetoCarrol.marca);
+        System.out.println("El color de carrol es:"+objetoCarrol.color);
+        
+     //Invocando o llamando funciones o metodos contenidos en la clase automovil
+        objetoCarrol.acelerar(0,80);
+        
+     //Auto 2
+      auto objetoCarro2=new auto ();
+      
+      objetoCarro2.marca="Mercedes";
+      objetoCarro2.color="Blanco";
+      objetoCarro2.placa="BYD-119";
+      objetoCarro2.modelo=2007;
+      
+        System.out.println("La Marca del carrol es:"+objetoCarro2.marca);
+        System.out.println("El color de carrol es:"+objetoCarro2.color);
+      
+    }
+    }
+        
+        
+        
+        ////Clases
+        public class auto {
+    //atributos
+    String marca;
+    String color;
+    String placa;
+    int modelo;
+    
+    //metodos
+    void acelerar (int entradaVelocidadInicial,int entradaVelocidadFinal){
+        int velocidad =entradaVelocidadInicial;
+        while (velocidad<=entradaVelocidadFinal){
+            System.out.println("Automovil Acelerando:"+velocidad);
+            velocidad+=20;
+        }
+    }
+    void frenar (int entradaVelocidadInicial,int entradaVelocidadFinal){
+        for (int frenar=entradaVelocidadInicial;frenar>=entradaVelocidadFinal;frenar-=10){
+            System.out.println("Automovil frenando: " + frenar);
+        }
+    }
+}
