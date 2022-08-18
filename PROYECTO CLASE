@@ -1,0 +1,61 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
+ */
+
+package COMPRAVENTADECARROS;
+
+import javax.swing.JOptionPane;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+
+/**
+ *
+ * @author ketty
+ */
+public class COMPRAVENTA {
+
+    public static void main(String[] args) {
+    Scanner select = new Scanner (System.in);
+    ArrayList <Integer> inventary = new ArrayList ();
+    System.out.println("Esta es tu compraventa GLH ");
+        System.out.println("1.Add Vehicule - 2. Inventary");
+            int option=select.nextInt();
+            if (option == 1){
+            Vehiculos vehiculo=new Vehiculos ();
+            System.out.println("# Reference");
+            vehiculo.reference=select.nextInt();
+            System.out.println("Color to vehicule");
+            vehiculo.color=select.next();
+            System.out.println("Model to vehicule");
+            vehiculo.model=select.next();
+            System.out.println("Car Brand");
+            vehiculo.car_brand=select.next();
+            System.out.println("Vehicule year");
+            vehiculo.year=select.nextInt();
+            System.out.println("Miles of your vehicle ");
+            vehiculo.miles=select.nextInt();
+            System.out.println("Price to vehicule");
+            vehiculo.price=select.nextInt();
+            
+            System.out.println("The new vehicule is "+ vehiculo.reference + vehiculo.color + vehiculo.model + vehiculo.car_brand + vehiculo.year + "year" + vehiculo.miles + "miles" + vehiculo.price + "usd");
+            
+        }
+          
+      }
+    
+    }
+    
+    /////////////////////////// classs //////////////
+    
+    public class Vehiculos {
+    int reference;
+    String color;
+    String model;
+    String car_brand;
+    int year;
+    int miles;
+    int price;
+}
