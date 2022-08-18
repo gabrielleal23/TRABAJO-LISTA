@@ -1,0 +1,54 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
+ */
+
+package COMPRAVENTADECARROS;
+
+import javax.swing.JOptionPane;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+
+/**
+ *
+ * @author ketty
+ */
+public class COMPRAVENTA {
+
+    public static void main(String[] args) {
+    Scanner select = new Scanner (System.in);
+    ArrayList <Integer> inventary = new ArrayList ();
+    System.out.println("Esta es tu compraventa GLH ");
+        System.out.println("1.Add Vehicule - 2. Inventary");
+            int option=select.nextInt();
+            if (option == 1){
+            System.out.println("The reference number to vehicule");
+            int ref=select.nextInt(); 
+            inventary.add(ref);
+            System.out.println("Select color to vehicule");
+            System.out.println("1.Green - 2. Black - 3.Grey - 4. White - 5. Blue - 6.");
+            int color=select.nextInt(); 
+            inventary.add(color);
+            System.out.println("Select model to vehicule");
+            System.out.println("1.TOYOTA - 2.RENAULT - 3.CHEVROLET - 4.WW - 5.MERCEDEZ BENZ - 6.BMW - 7.FORD - 8.KIA - 9.PORCHE - 10.LEXUS ");
+            int mod=select.nextInt();
+            inventary.add(mod);
+            System.out.println("Vehicule year");
+            int year=select.nextInt();
+            inventary.add(year);
+            System.out.println("Miles");
+            int miles = select.nextInt();
+            inventary.add(miles);
+            System.out.println("Price");
+            int price=select.nextInt();
+            inventary.add(price);  
+            System.out.println("Inventary"+inventary);
+   
+        }
+          
+      }
+    
+    }
+  
