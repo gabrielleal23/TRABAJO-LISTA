@@ -1,0 +1,100 @@
+package compraventa;
+
+import javax.swing.JOptionPane;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+/**
+ *
+ * @author gabriel
+ */
+public class Compraventa {
+ Scanner select = new Scanner (System.in);
+ static ArrayList <vehiculos> inventary = new ArrayList ();
+// USUER AND PASSWORD 
+ static String us = "glh1012";
+ static String ps = "170911" ;
+    
+ 
+    public static void main(String[] args) {
+    int i,numr;
+    Scanner select = new Scanner (System.in);
+    System.out.println("GLH BUYSALING ");
+    JOptionPane.showMessageDialog(null, "Welcome to system "
+                                  +"Verification of your identity");
+    String user = JOptionPane.showInputDialog("Type your user");
+    String password = JOptionPane.showInputDialog("Type your password");
+    if(us.equals(user)){
+        if(ps.equals(password)){
+        }else{  JOptionPane.showMessageDialog(null,
+                    "The password is invalid","Incorrect",JOptionPane.ERROR);
+                }
+        }else{  JOptionPane.showMessageDialog(null,
+                    "The user is invalid","Incorrect",JOptionPane.ERROR);
+            }
+     
+        System.out.println("1.Add Vehicule");
+            int option=select.nextInt();
+            if (option == 1){
+            do {
+            System.out.print("  Vehicules number to add:  ");
+            numr = select.nextInt();
+            }while (numr < 0); 
+            for (i = 1; i <= numr; i++) {
+            vehiculos car=new vehiculos ();
+            System.out.println("# Reference");
+            car.reference=select.nextInt()+i;
+            System.out.println("Color to vehicule");
+            car.color=select.next();
+            System.out.println("Model to vehicule");
+            car.model=select.next();
+            System.out.println("Car Brand");
+            car.car_brand=select.next();
+            System.out.println("Vehicule year");
+            car.year=select.nextInt();
+            System.out.println("Miles of your vehicle ");
+            car.miles=select.nextInt();
+            System.out.println("Price to vehicule");
+            car.price=select.nextInt();
+            inventary.add(car);
+                System.out.println("The number reference is  "+ car.reference);
+                System.out.println("The Color is " + car.color );
+                System.out.println("The Model is "+ car.model );
+                System.out.println("The Car Brand is "+ car.car_brand);
+                System.out.println("The year is "+ car.year );
+                System.out.println("The miles is " + car.miles + " miles");
+                System.out.println("The price is " + car.price+ " usd ");    
+                
+                 for (int x = 0; x < inventary.size(); x++) {
+			car = inventary.get(x);
+			System.out.println(inventary);     
+                }     
+                 
+            }
+        }
+    }
+}
+  
+    
+//// CLASSS
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package compraventa;
+
+/**
+ *
+ * @author ketty
+ */
+public class vehiculos {
+    int reference;
+    String color;
+    String model;
+    String car_brand;
+    int year;
+    int miles;
+    int price;
+}
+
