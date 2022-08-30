@@ -1,0 +1,113 @@
+package visibilidad1;
+
+import visibilidad2.piloto;
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+
+
+/**
+ *
+ * @author SALA
+ */
+public class Mostrario {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // 
+        avion objetoavion=new avion();
+        //objetoavion.aerolinea="Avianca";
+        //objetoavion.id=11234;
+        //objetoavion.tipo="Airbus320";
+        objetoavion.setfabricante("airbus");
+        
+        System.out.println("La aerolinaea del avion es:" + objetoavion.getfabricante());
+        
+        objetoavion.ascender(0, 100000);
+        
+        
+        piloto objetopiloto= new piloto();
+        objetopiloto.nombre="Juan";
+        
+        objetopiloto.pilotohabla();
+        
+    }
+    
+}
+//////////////
+clase 
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package visibilidad1;
+
+/**
+ *
+ * @author SALA
+ */
+public class avion {
+    
+    private String fabricante;
+    private String tipo;
+    private String aerolinea;
+    private int id;
+    
+    void ascender (int entradaalturainicial,int entradaalturapista){
+        for(int altura=entradaalturainicial; altura<=entradaalturapista;altura+=1000){
+            System.out.println("Avion"+altura);
+        }
+        
+        System.out.println(fabricante);
+        System.out.println(aerolinea);
+    }
+    
+    private void prueba(){
+        System.out.println("Probando");
+    }
+    // declaracion metodo getter 
+    
+    public String getfabricante(){
+        return fabricante;
+    }
+    
+    // metodos get manera automatica
+    //click derecho insert code
+
+    public String getAerolinea() {
+        return aerolinea;
+    }
+    
+    
+    //declaracion de los setter
+    public void setfabricante(String entradafabricante){
+        fabricante=entradafabricante;
+    }
+}
+ ////////////////////
+ clase 2
+ /*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package visibilidad2;
+
+
+/**
+ *
+ * @author SALA
+ */
+public class piloto {
+    
+    public String nombre;
+    String tipo;
+    String licencia;
+    
+    public void pilotohabla(){
+        System.out.println("Buens dias");
+    }
+}
