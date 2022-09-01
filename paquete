@@ -1,0 +1,100 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package principal;
+import visi1.competidor;
+/**
+ *
+ * @author SALA
+ */
+public class Principal {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        carro objetocarro=new carro("v6","Hatchback");
+        System.out.println("El motor del carro es "+ objetocarro.motor);
+        System.out.println("El tipo de vehiculo es "+ objetocarro.tipo);
+        objetocarro.id=(3421);
+               
+        objetocarro.velocidad(0, 130);
+        
+        competidor objetocompetidor=new competidor("Pepito","o+","a5");
+        competidor.compañero="Jaime";
+        System.out.println("El nombre del competidor es " + objetocompetidor.nombrecorredor);
+        System.out.println("El rh del competidor es "+  objetocompetidor.rh);
+        
+        
+        
+        
+        
+        
+    }
+    
+}
+
+///// clase one
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package principal;
+
+/**
+ *
+ * @author SALA
+ */
+public class carro {
+    
+    public static String motor;
+    public String tipo;
+    int id;
+    
+    //Constructores 
+    public carro (String entradamotor, String entradatipo){
+        this.motor=entradamotor;
+        this.tipo=entradatipo;
+        
+    }
+    
+    void velocidad(int velocidadinicialcarrera,int velocidadinicialcurva){
+         for(int recta=velocidadinicialcarrera; recta<=velocidadinicialcurva;recta+=30){
+             System.out.println("Velocidad del carro"+recta);
+         }
+    }
+    
+}
+///////////////////////////////////////////Clase en segundo paquete//////////////////////////////////////////////
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package principal;
+
+/**
+ *
+ * @author SALA
+ */
+public class carro {
+    
+    public static String motor;
+    public String tipo;
+    int id;
+    
+    //Constructores 
+    public carro (String entradamotor, String entradatipo){
+        this.motor=entradamotor;
+        this.tipo=entradatipo;
+        
+    }
+    
+    void velocidad(int velocidadinicialcarrera,int velocidadinicialcurva){
+         for(int recta=velocidadinicialcarrera; recta<=velocidadinicialcurva;recta+=30){
+             System.out.println("Velocidad del carro"+recta);
+         }
+    }
+    
+}
